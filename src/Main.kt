@@ -9,7 +9,6 @@ fun main() {
     Thread.sleep(5000)
 
     while (intentos <= 7 ){
-        DibujoAhorcado.dibujar(intentos)
         println("Estas en el intento: $intentos de 7")
         print("Adivina la palabra: ")
         for (x in 0 until palabrawin.length){
@@ -36,10 +35,11 @@ fun main() {
             println("-------------------------------------------------------------------------------------")
             continue
         }
+        DibujoAhorcado.dibujar(intentos)
         intentos++
         println("-------------------------------------------------------------------------------------")
     }
-    if (intentos == 7) {
+    if (intentos == 8) {
         println("PERDISTE buena suerte a la proxima!!!")
         println("La palabra Secreta es: $palabrawin")
     }
